@@ -6,6 +6,7 @@
 #include "../../lsMisc/CommandLineString.h"
 #include "../../lsMisc/GetVersionString.h"
 #include "../../lsMisc/OpenCommon.h"
+#include "../../lsMisc/HighDPI.h"
 #include "../../lsMisc/stdosd/stdosd.h"
 
 #include "launchbrowser.h"
@@ -49,6 +50,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 {
     UNREFERENCED_PARAMETER(hPrevInstance);
     UNREFERENCED_PARAMETER(lpCmdLine);
+    
+    InitHighDPISupport();
 
     wstring mainArg;
     CCommandLineString cmdLine;
